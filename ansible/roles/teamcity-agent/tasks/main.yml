@@ -1,0 +1,20 @@
+---
+- name: Download TeamCity Agent
+  win_get_url:
+    url: "{{ teamcity_server_url }}/repository/download/TeamCityAgent.zip"
+    dest: C:\TeamCity\TeamCityAgent.zip
+
+- name: Unzip TeamCity Agent
+  win_unzip:
+    src: C:\TeamCity\TeamCityAgent.zip
+    dest: C:\TeamCity\Agent
+
+- name: Configure TeamCity Agent
+  win_template:
+    src: buildAgent.properties.j2
+    dest: C:\TeamCity\Agent\conf\buildAgent.properties
+
+- name: Install and Start TeamCity Agent Service
+  win_shell: |
+    C:\TeamCity\Agent\bin\agent.bat install
+    Start-Service TCBuildAgent

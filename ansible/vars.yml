@@ -1,0 +1,2 @@
+teamcity_server_url: "https://your-teamcity-server"
+teamcity_agent_name: "MyBuildAgent"

@@ -1,0 +1,10 @@
+---
+- name: Configure TeamCity Agent
+  hosts: teamcity_agents
+  vars_files:
+    - vars.yml
+  roles:
+    - chocolatey
+    - dotnet
+    - nvm
+    - teamcity_agent

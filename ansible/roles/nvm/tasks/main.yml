@@ -1,0 +1,5 @@
+---
+- name: Install Node.js Version Manager (nvm)
+  win_chocolatey:
+    name: nvm
+    state: present
