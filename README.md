@@ -1,6 +1,6 @@
-# TeamCity Agent Provisioning with Terraform
+# TeamCity Agent Provisioning with Terraform and Ansible
 
-This Terraform module provisions a Windows 10 virtual machine on Azure to be used as a TeamCity build agent. The VM is configured with .NET Framework 4.7.2 and Node.js Version Manager (nvm).
+This Terraform module provisions a Windows 10 virtual machine on Azure to be used as a TeamCity build agent. The VM is then configured with Ansible to .NET Framework 4.7.2 and Node.js Version Manager (nvm).
 
 ### Please note that this This project is highly unstable and is a proof of concept to serve as a skeleton for later use. Use with caution!
 
